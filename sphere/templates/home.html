@@ -1,0 +1,41 @@
+<!-- myapp/templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orbiting Spheres</title>
+    <style>
+        canvas { width: 100%; height: 100% }
+    </style>
+
+<!-- 
+    <script>
+        // const socket = new WebSocket('ws://' + window.location.host + '/ws/some_path/');
+        const socket = new WebSocket('ws://localhost:8080/ws/billboards/');
+//        const socket = new WebSocket('ws://127.0.0.1:8080/ws/billboards');
+
+        socket.onopen = function(e) {
+            console.log('WebSocket Open', e);
+            socket.send(JSON.stringify({'message': 'Hello!'}));
+        };
+
+        socket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            console.log('Message from server ', data.message);
+        };
+
+
+
+        socket.onclose = function(e) {
+            console.error('WebSocket closed unexpectedly');
+        };
+    </script> -->
+
+
+{% load static %}
+</head>
+<body>
+    <canvas id="glCanvas"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
