@@ -4,6 +4,8 @@
 # Ignore db.sqlite3 file
 db.sqlite3
 
-.log
+*.log
 
-.out
+*.out
+
+.env
